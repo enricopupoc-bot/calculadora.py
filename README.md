@@ -1,2 +1,31 @@
-# calculadora.py
-Uma calculadora simples no Python
+def calculadora():
+    print("Calculadora Simples")
+    print("Escolha a operação:")
+    print("1 - Soma")
+    print("2 - Subtração")
+    print("3 - Multiplicação")
+    print("4 - Divisão")
+
+    escolha = input("Digite o número da operação: ")
+
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
+
+    if escolha == '1':
+        resultado = num1 + num2
+    elif escolha == '2':
+        resultado = num1 - num2
+    elif escolha == '3':
+        resultado = num1 * num2
+    elif escolha == '4':
+        if num2 != 0:
+            resultado = num1 / num2
+        else:
+            return "Erro: divisão por zero!"
+    else:
+        return "Opção inválida!"
+
+    return f"Resultado: {resultado}"
+
+
+print(calculadora())
